@@ -5,8 +5,7 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       t.string :image_url
       t.string :video_url
       t.string :description
-      t.string :belongs_to
-      t.string :card
+      t.belongs_to :card, null: false, foreign_key: true
 
       t.timestamps
     end
