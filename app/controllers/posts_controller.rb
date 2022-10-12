@@ -1,18 +1,17 @@
 class PostsController < ApplicationController
+    protect_from_forgery with: :null_session
+
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
+    
 
     def index
         render json: Post.all
     end
 
     def show 
-        post =Post.find_by(id:params[:id])
-        if post 
-            render json: post, status: :ok
-        else
-            render json:{error: "post not found"}
-        end
-
+        post =find_post
+        render json: post
     end
     
     
@@ -33,6 +32,7 @@ class PostsController < ApplicationController
         head :no_content
     end
     
+    
     private
     def post_params
         params.permit(:name, :image_url,:video_url,:description)
@@ -41,8 +41,11 @@ class PostsController < ApplicationController
     def find_post
         Post.find(params[:id])
     end
-    
+    def render_unprocessable_entity_response(invalid)
+        render json: { errors: invalid.record.errors }, status: :unprocessable_entity
+    end
+
     def render_not_found_response
-        render json: {error: "No Card found"}
+        render json: { error: "post not found" }, status: :not_found
     end
 end

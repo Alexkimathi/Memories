@@ -2,22 +2,23 @@
 import './App.css';
 
 import React from 'react'
-import Home from './components/Home';
+
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import AllCards from './components/AllCards';
 
 function App() {
   return (
     <div>
-   
 
     <Router>
     <Routes>
-        <Route path="/" element={<Home />} />
+        
+        <Route path="/" element={<AllCards /> } />
         
     </Routes>
 </Router>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
