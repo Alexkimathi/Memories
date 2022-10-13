@@ -12,19 +12,20 @@ function NewArtsForm() {
   const [image_url, setImage_url] = useState("");
   const [video_url, setVideo_url] = useState("");
   const [description, setDescription] = useState("");
+  
 
   const history = useNavigate();
 
   function submitHandler(e) {
     e.preventDefault();
-    const Art = { name, image_url, video_url, description };
+    const newpost = { name, image_url, video_url, description };
 
-    fetch("https://morning-beach-90406.herokuapp.com/arts", {
+    fetch('/posts', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(Art),
+      body: JSON.stringify(newpost),
     }).then(() => {
       history("/");
     });
@@ -79,8 +80,8 @@ function NewArtsForm() {
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </div>
-        <div className="actions">
-          <button>Comment</button>
+        <div className="controls">
+          <button className="btn-view-1">Comment</button>
         </div>
       </form>
     </Card>

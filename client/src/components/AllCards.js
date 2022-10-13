@@ -12,6 +12,9 @@ function AllCards() {
       .then((data) => setCards(data));
   }, []);
 
+
+  
+
   return (
     <div>
       <Navbar />
@@ -37,7 +40,7 @@ function AllCards() {
               </Link>
 
               <Link to={`/reviews/${card.id}`}>
-              <button className="btn-view">Review</button>
+              <button className="btn-view">Comment</button>
             </Link>
             </div>
           </div>

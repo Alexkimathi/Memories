@@ -6,7 +6,8 @@ class PostsController < ApplicationController
     
 
     def index
-        render json: Post.all
+        posts = Post.all
+        render json: posts
     end
 
     def show 
@@ -16,8 +17,8 @@ class PostsController < ApplicationController
     
     
     def create
-        post = Post.create(post_params);
-        render json: post, status: :created
+        post = Post.create!(post_params);
+        render json: Post, status: :created
     end
     
     def update
@@ -35,14 +36,14 @@ class PostsController < ApplicationController
     
     private
     def post_params
-        params.permit(:name, :image_url,:video_url,:description)
+        params.permit(:name, :image_url,:video_url,:description, :card_id)
     end
     
     def find_post
         Post.find(params[:id])
     end
     def render_unprocessable_entity_response(invalid)
-        render json: { errors: invalid.record.errors }, status: :unprocessable_entity
+        render json: { errors: invalid.record.errors.full_messages}, status: :unprocessable_entity
     end
 
     def render_not_found_response
