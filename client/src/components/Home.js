@@ -4,12 +4,20 @@ import "../App.css";
 import Cards from "./Cards";
 import Button from "./Button";
 import cake from "../img/cake.jpg"
+import { NavLink } from "react-router-dom";
 
 
 function Home() {
   return (
     <div>
-      <Navbar />
+    <div className="min-nav">
+    <Navbar />
+    <NavLink to={"/allcards"} exact="true"className='btn-view-1'>
+    AllCards
+  </NavLink>
+  
+    </div>
+     
       <div className="info-section">
         <div className="info">
           <div className="info-text">
@@ -21,9 +29,11 @@ function Home() {
               GIFs,Photos, & Videos
             </p>
 
-            <Button />
+           
           </div>
+          <Button />
         </div>
+        
 
         <div className="info-cards">
           <div className="info-cards1">

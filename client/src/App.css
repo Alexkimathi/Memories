@@ -25,11 +25,13 @@ body {
   align-items: stretch;
   gap: 2rem;
   padding: 0 10rem;
+  
   /* border-radius: 1rem; */
 }
 .site-title {
   font-size: 3.5rem;
   font-weight: bolder;
+  padding-right: 42rem;
 }
 .nav ul {
   padding: 0;
@@ -64,6 +66,7 @@ body {
   width: 50%;
   font-size: 2.5rem;
   letter-spacing: 0.1rem;
+  
 }
 .info > .info-text > h1 {
   letter-spacing: 0.3rem;
@@ -546,16 +549,22 @@ body {
 }
 
 .btn-view-1{
-  background-color: #4CAF50; /* Green */
+  background-color: #0a0a23;
   border: none;
   color: white;
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem;
   text-align: center;
-  /* text-decoration: none; */
+  text-decoration: none;
   display: inline-block;
   font-size: 2rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   font-weight: 700;
+
+   
+ 
+  /* min-height: 3rem;
+  min-width: 12rem; */
+ 
   
 }
 
@@ -575,6 +584,87 @@ body {
  
 }
 
+.min-nav{
+  display: flex;
+  justify-content: space-between;
+}
+
 
 
 /* end of allartsDEtails */
+
+
+.form {
+  padding: 1rem;
+}
+.try{
+  padding-top: 10rem;
+}
+
+
+
+.control {
+  margin-bottom: 1rem;
+  
+}
+.controls{
+  padding: 2rem;
+}
+
+.control label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-left: 2rem;
+  
+}
+
+.control input,
+.control textarea {
+  display: block;
+  font: inherit;
+  border-radius: 1rem;
+  border: .3rem solid #ccc;
+  padding: 1rem;
+  margin-left: 2rem;
+  width: 90%;
+  font-size: 1.5rem;
+
+}
+
+.actions {
+  margin-top: 1rem;
+  text-align: right;
+
+}
+ h1 {
+  font-size: 4rem;
+  padding-left: 4rem;
+  padding-top: 5rem;
+  text-align: center;
+}
+.heading{
+  align-items: center;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #77002e;
+  color: white;
+  border: 1rem solid #77002e;
+  border-radius: 1rem;
+  font-weight: bold;
+  padding: .1rem;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #a50e48;
+  border-color: #a50e48;
+}

@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
@@ -21,9 +20,10 @@ function Navbar() {
         <NavLink to={"/newartsform"} exact="true">
           sigin-in
         </NavLink>
-        <NavLink to={"/newartsform"} exact="true" className="btn-view-1">
-        created-cards
-      </NavLink>
+
+      
+
+
 
       </ul>
     </nav>

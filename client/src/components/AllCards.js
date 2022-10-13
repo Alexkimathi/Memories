@@ -35,6 +35,10 @@ function AllCards() {
               <Link to={`/artsdetails/${card.id}`}>
                 <button className="btn-view">View Card</button>
               </Link>
+
+              <Link to={`/reviews/${card.id}`}>
+              <button className="btn-view">Review</button>
+            </Link>
             </div>
           </div>
         ))}

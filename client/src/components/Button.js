@@ -3,7 +3,8 @@ import React from 'react'
 function Button() {
   return (
     <div>
-    <a href="/" className="btn-card">CreateCard</a>
+    <a href="/newcards" className="btn-card">CreateCard</a>
+ 
     
     </div>
   )
