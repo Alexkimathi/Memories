@@ -9,13 +9,13 @@ import Home from './components/Home';
 import NewCard from './components/ui/NewCard';
 import Reviews from './components/Reviews'
 
+
 function App() {
   return (
     <div>
 
     <Router>
     <Routes>
-        
         <Route path="/" element={<Home /> } />
         <Route path="/allcards/" element={<AllCards />} />
         <Route path="/newcards/" element={<NewCard /> } />

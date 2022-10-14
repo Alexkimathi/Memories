@@ -8,6 +8,13 @@ Rails.application.routes.draw do
 
   resources :cards, only: [:index, :show, :create, :update, :destroy]
   resources :posts, only: [:index, :show, :create, :update, :destroy]
+  resource :users, only: [:create]
+  
+  get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 
 
 end
+
+
+
+
