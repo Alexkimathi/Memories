@@ -1,9 +1,9 @@
-#   Memories web App
+# Memories web App
 
 ## By Alex kimathi murithi
 
 ## screenshot
-![image](./assests/img/image10.png)
+![image](./client/src/img/memory.png)
 
 ## Table Of Content
 
@@ -19,7 +19,7 @@
 
 <p>This project is a web App for creating memories it could be any memory like promotion,euology,birthday party,promotion,farewell and many more</p>
 
-[Go Back to the top](#   Memories web App)
+[Go Back to the top](# Memories web App)
 
 ## Features
 
